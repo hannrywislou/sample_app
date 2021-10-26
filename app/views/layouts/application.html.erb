@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= render 'layouts/shim' %>
     <!--[if lt IE 9]>
       <script src="//cdnjs.clouflare.com/ajax/libs/html5shiv/r29/html15.min.js">
       </script>
@@ -13,9 +14,10 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
+    <%= render 'layouts/header' %>
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
-        <%= link_to "sample_app", '#', id: "logo" %>
+        <%= link_to "sample app", '#', id: "logo" %>
         <nav>
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Home",   '#' %></li>
@@ -26,6 +28,8 @@
       </div>
     </header>
     <div class="container">
-    <%= yield %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
   </body>
 </html>
