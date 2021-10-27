@@ -22,7 +22,7 @@ end
 #  @bass_about = "My name is Nikita, I RoR developer, I live in Hrodno,"
 #end
 #
-#def contacts
+#def contact
 #  @bass_contacts = "My contacts: +375292410003"
 #end
 #
